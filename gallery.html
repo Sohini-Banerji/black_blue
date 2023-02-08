@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<!--
+Template Name: Security Guard
+Version: 1.0.0
+Author: 
+Website: 
+Purchase:
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--[endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Video Gallery</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="security guard" />
+    <meta name="keywords" content="security guard/guard team/bodyguard" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <!--start theme style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/meanmenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/slicknav.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="js/plugin/rs_slider/layers.css" />
+    <link rel="stylesheet" type="text/css" href="js/plugin/rs_slider/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="js/plugin/rs_slider/settings.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" href="images/icon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+<style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .inpt{
+        display: none;
+    }
+    .contain{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 195px;
+    }
+    label{
+        display: inline-block;
+        height: 100%;
+        /* margin: 20px 0px 5px 0px; */
+        padding: 0px 10px;
+        line-height: 40px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: color .5s;
+        background-color: white;
+        color: #254a93;
+        border-radius: 2px;
+    }
+    label:hover{
+        color: white;
+        background-color: #254a93;
+    }
+    .photo-gal{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-auto-rows: 250px;
+        grid-auto-flow: dense;
+        grid-gap: 10px;
+    }
+    .pic{
+        position: relative;
+        overflow: hidden;
+       
+    }
+    .pic img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        transition: 0.5s all ease-in-out;
+    }
+    .pic:hover img{
+        
+        transform: scale(1.1);
+    }
+   .pic .image_overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            color: white;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .image_overlay:hover{
+            opacity: 1;
+           
+            /* background-color: red; */
+        }
+         .image_overlay > *{
+            transform: translateY(20px);
+            transition: transform 0.4s;
+        } 
+        .image_overlay:hover > *{
+            transform: translate(0);
+            
+        }
+        
+    .item1, .item3, .item6, .item10, .item13, .item16, .item17, .item18, .item14, .item15, .item19, .item20, .item23,
+     .item24, .item51, .item21, .item68, .item69, .item70, .item71, .item72, .item73, .item45, .item52, .item66, .item86{
+        grid-row: span 2;
+    }
+    .item65, .item64, .item61, .item63, .item18, .item27, .item67{
+        
+      grid-row: span 3;
+    }
+    .item29, .item30, .item31, .item32, .item33, .item34, .item35, .item36, .item39, .item40, .item41, 
+     .item74, .item75, .item76, .item77, .item78,
+     .item79, .item80, .item81, .item82, .item83, .item84, .item85, .item87, .item49, .item42, .item43, .item44, .item46{
+        grid-row: span 2;
+    }
+    .item37, .item38{
+        grid-row: span 3;
+    }
+    @media (min-width: 600px){
+        .photo-gal .item11{
+        grid-column: span 2;
+    }
+    .photo-gal .item59{
+        grid-column: span 2;
+    }
+    .photo-gal .item73{
+        grid-column: span 2;
+    }
+    .photo-gal .item25{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+    #check1:checked ~ .contain .photo-gal .pic{
+        /* opacity: 1;
+        transform: scale(1);
+        position: relative;*/
+        transition: .5s; 
+        display: none;
+    }
+    
+    #check2:checked ~ .contain .photo-gal .ss{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check2:checked ~ .contain .photo-gal .cere,
+    #check2:checked ~ .contain .photo-gal .sg,
+    #check2:checked ~ .contain .photo-gal .hsk,
+    #check2:checked ~ .contain .photo-gal .body,
+    #check2:checked ~ .contain .photo-gal .bounc,
+    #check2:checked ~ .contain .photo-gal .es,
+    #check2:checked ~ .contain .photo-gal .k9,
+    #check2:checked ~ .contain .photo-gal .kst,
+    #check2:checked ~ .contain .photo-gal .lg,
+    #check2:checked ~ .contain .photo-gal .gm,
+    #check2:checked ~ .contain .photo-gal .fm,
+    #check2:checked ~ .contain .photo-gal .pay
+    {
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check3:checked ~ .contain .photo-gal .body{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check3:checked ~ .contain .photo-gal .sg,
+    #check3:checked ~ .contain .photo-gal .cere,
+    #check3:checked ~ .contain .photo-gal .hsk,
+    #check3:checked ~ .contain .photo-gal .ss,
+    #check3:checked ~ .contain .photo-gal .bounc,
+    #check3:checked ~ .contain .photo-gal .es,
+    #check3:checked ~ .contain .photo-gal .k9,
+    #check3:checked ~ .contain .photo-gal .kst,
+    #check3:checked ~ .contain .photo-gal .lg,
+    #check3:checked ~ .contain .photo-gal .gm,
+    #check3:checked ~ .contain .photo-gal .fm,
+    #check3:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check4:checked ~ .contain .photo-gal .bounc{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check4:checked ~ .contain .photo-gal .sg,
+    #check4:checked ~ .contain .photo-gal .body,
+    #check4:checked ~ .contain .photo-gal .cere,
+    #check4:checked ~ .contain .photo-gal .ss,
+    #check4:checked ~ .contain .photo-gal .hsk,
+    #check4:checked ~ .contain .photo-gal .es,
+    #check4:checked ~ .contain .photo-gal .k9,
+    #check4:checked ~ .contain .photo-gal .kst,
+    #check4:checked ~ .contain .photo-gal .lg,
+    #check4:checked ~ .contain .photo-gal .gm,
+    #check4:checked ~ .contain .photo-gal .fm,
+    #check4:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check5:checked ~ .contain .photo-gal .k9{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+        
+    }
+    #check5:checked ~ .contain .photo-gal .sg,
+    #check5:checked ~ .contain .photo-gal .body,
+    #check5:checked ~ .contain .photo-gal .cere,
+    #check5:checked ~ .contain .photo-gal .ss,
+    #check5:checked ~ .contain .photo-gal .hsk,
+    #check5:checked ~ .contain .photo-gal .es,
+    #check5:checked ~ .contain .photo-gal .bounc,
+    #check5:checked ~ .contain .photo-gal .kst,
+    #check5:checked ~ .contain .photo-gal .lg,
+    #check5:checked ~ .contain .photo-gal .gm,
+    #check5:checked ~ .contain .photo-gal .fm,
+    #check5:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+        height: 90%;
+    }
+    #check6:checked ~ .contain .photo-gal .kst{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+        
+    }
+    #check6:checked ~ .contain .photo-gal .sg,
+    #check6:checked ~ .contain .photo-gal .body,
+    #check6:checked ~ .contain .photo-gal .cere,
+    #check6:checked ~ .contain .photo-gal .ss,
+    #check6:checked ~ .contain .photo-gal .hsk,
+    #check6:checked ~ .contain .photo-gal .es,
+    #check6:checked ~ .contain .photo-gal .bounc,
+    #check6:checked ~ .contain .photo-gal .k9,
+    #check6:checked ~ .contain .photo-gal .lg,
+    #check6:checked ~ .contain .photo-gal .gm,
+    #check6:checked ~ .contain .photo-gal .fm,
+    #check6:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+        height: 90%;
+    }
+   
+    #check7:checked ~ .contain .photo-gal .sg{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check7:checked ~ .contain .photo-gal .kst,
+    #check7:checked ~ .contain .photo-gal .body,
+    #check7:checked ~ .contain .photo-gal .cere,
+    #check7:checked ~ .contain .photo-gal .ss,
+    #check7:checked ~ .contain .photo-gal .hsk,
+    #check7:checked ~ .contain .photo-gal .es,
+    #check7:checked ~ .contain .photo-gal .bounc,
+    #check7:checked ~ .contain .photo-gal .k9,
+    #check7:checked ~ .contain .photo-gal .lg,
+    #check7:checked ~ .contain .photo-gal .gm,
+    #check7:checked ~ .contain .photo-gal .fm,
+    #check7:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check8:checked ~ .contain .photo-gal .lg{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check8:checked ~ .contain .photo-gal .kst,
+    #check8:checked ~ .contain .photo-gal .body,
+    #check8:checked ~ .contain .photo-gal .cere,
+    #check8:checked ~ .contain .photo-gal .ss,
+    #check8:checked ~ .contain .photo-gal .hsk,
+    #check8:checked ~ .contain .photo-gal .es,
+    #check8:checked ~ .contain .photo-gal .bounc,
+    #check8:checked ~ .contain .photo-gal .k9,
+    #check8:checked ~ .contain .photo-gal .sg,
+    #check8:checked ~ .contain .photo-gal .gm,
+    #check8:checked ~ .contain .photo-gal .fm,
+    #check8:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check9:checked ~ .contain .photo-gal .gm{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check9:checked ~ .contain .photo-gal .kst,
+    #check9:checked ~ .contain .photo-gal .body,
+    #check9:checked ~ .contain .photo-gal .cere,
+    #check9:checked ~ .contain .photo-gal .ss,
+    #check9:checked ~ .contain .photo-gal .hsk,
+    #check9:checked ~ .contain .photo-gal .es,
+    #check9:checked ~ .contain .photo-gal .bounc,
+    #check9:checked ~ .contain .photo-gal .k9,
+    #check9:checked ~ .contain .photo-gal .sg,
+    #check9:checked ~ .contain .photo-gal .lg,
+    #check9:checked ~ .contain .photo-gal .fm,
+    #check9:checked ~ .contain .photo-gal .pay
+    {
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check10:checked ~ .contain .photo-gal .hsk{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check10:checked ~ .contain .photo-gal .kst,
+    #check10:checked ~ .contain .photo-gal .body,
+    #check10:checked ~ .contain .photo-gal .cere,
+    #check10:checked ~ .contain .photo-gal .ss,
+    #check10:checked ~ .contain .photo-gal .gm,
+    #check10:checked ~ .contain .photo-gal .es,
+    #check10:checked ~ .contain .photo-gal .bounc,
+    #check10:checked ~ .contain .photo-gal .k9,
+    #check10:checked ~ .contain .photo-gal .sg,
+    #check10:checked ~ .contain .photo-gal .lg,
+    #check10:checked ~ .contain .photo-gal .fm,
+    #check10:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check11:checked ~ .contain .photo-gal .fm{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check11:checked ~ .contain .photo-gal .kst,
+    #check11:checked ~ .contain .photo-gal .body,
+    #check11:checked ~ .contain .photo-gal .cere,
+    #check11:checked ~ .contain .photo-gal .ss,
+    #check11:checked ~ .contain .photo-gal .gm,
+    #check11:checked ~ .contain .photo-gal .es,
+    #check11:checked ~ .contain .photo-gal .bounc,
+    #check11:checked ~ .contain .photo-gal .k9,
+    #check11:checked ~ .contain .photo-gal .sg,
+    #check11:checked ~ .contain .photo-gal .lg,
+    #check11:checked ~ .contain .photo-gal .hsk,
+    #check11:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check12:checked ~ .contain .photo-gal .es{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check12:checked ~ .contain .photo-gal .kst,
+    #check12:checked ~ .contain .photo-gal .body,
+    #check12:checked ~ .contain .photo-gal .cere,
+    #check12:checked ~ .contain .photo-gal .ss,
+    #check12:checked ~ .contain .photo-gal .gm,
+    #check12:checked ~ .contain .photo-gal .fm,
+    #check12:checked ~ .contain .photo-gal .bounc,
+    #check12:checked ~ .contain .photo-gal .k9,
+    #check12:checked ~ .contain .photo-gal .sg,
+    #check12:checked ~ .contain .photo-gal .lg,
+    #check12:checked ~ .contain .photo-gal .hsk,
+    #check12:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check13:checked ~ .contain .photo-gal .cere{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check13:checked ~ .contain .photo-gal .kst,
+    #check13:checked ~ .contain .photo-gal .body,
+    #check13:checked ~ .contain .photo-gal .fm,
+    #check13:checked ~ .contain .photo-gal .ss,
+    #check13:checked ~ .contain .photo-gal .gm,
+    #check13:checked ~ .contain .photo-gal .es,
+    #check13:checked ~ .contain .photo-gal .bounc,
+    #check13:checked ~ .contain .photo-gal .k9,
+    #check13:checked ~ .contain .photo-gal .sg,
+    #check13:checked ~ .contain .photo-gal .lg,
+    #check13:checked ~ .contain .photo-gal .hsk,
+    #check13:checked ~ .contain .photo-gal .pay{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    #check14:checked ~ .contain .photo-gal .pay{
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        transition: .5s;
+    }
+    #check14:checked ~ .contain .photo-gal .kst,
+    #check14:checked ~ .contain .photo-gal .body,
+    #check14:checked ~ .contain .photo-gal .cere,
+    #check14:checked ~ .contain .photo-gal .ss,
+    #check14:checked ~ .contain .photo-gal .gm,
+    #check14:checked ~ .contain .photo-gal .es,
+    #check14:checked ~ .contain .photo-gal .bounc,
+    #check14:checked ~ .contain .photo-gal .k9,
+    #check14:checked ~ .contain .photo-gal .sg,
+    #check14:checked ~ .contain .photo-gal .lg,
+    #check14:checked ~ .contain .photo-gal .hsk,
+    #check14:checked ~ .contain .photo-gal .fm{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: 0s;
+    }
+    /* @media (max-width: 600px){
+        .photo-gal{
+          grid-template-columns: span 1;
+        }
+    } */
+</style>
+</head>
+
+<body>
+
+    <!-- preloader Start -->
+    <div id="preloader">
+        <div id="status"><img src="images/preloader.gif" id="preloader_image" alt="loader">
+        </div>
+    </div>
+
+    <!-- Header wrapper start -->
+    <div class="sc_title_section">
+        <div class="sc_img_overlay"></div>
+        <div class="main_sc_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="main-header">
+                        <div class="top-header">
+                            <div class="container">
+                                <div class="col-lg-6 col-md-7 col-xs-12 col-sm-12 top_hedr_response">
+                                    <div class="header_slider_wrapper">
+                                        <div class="owl-carousel owl-theme top_text">
+                                            <div class="item">
+                                                <div class="top_heading_slide">
+                                                    <ul>
+                                                        <li><i class="flaticon-security-camera"></i> Welcome to <a href="#">Black & Blue</a> <span class="hidden-sm hidden-xs">- We care About your safety</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="top_heading_slide">
+                                                    <ul>
+                                                        <li><i class="flaticon-security-camera"></i> Welcome to <a href="#">Black & Blue</a> <span class="hidden-sm hidden-xs">- We care About your safety</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="top_heading_slide">
+                                                    <ul>
+                                                        <li><i class="flaticon-security-camera"></i> Welcome to <a href="#">Black & Blue</a> <span class="hidden-sm hidden-xs">- We care About your safety</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-5 col-xs-12 col-sm-12 top_icon_header">
+
+                                    <div class="right-side float-right">
+                                        <ul>
+                                            <!-- <li><a href="#" class="tran3s round-border icon"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
+                                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-facebook" aria-hidden="true" style="color: white; background-color: rgb(59, 89, 152);"></i></a></li>
+                                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-twitter" aria-hidden="true" style="color: white; background-color: rgb(8, 160, 233);"></i></a></li>
+                                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-google-plus" aria-hidden="true" style="color: white; background-color: red;"></i></a></li>
+                                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-pinterest" aria-hidden="true" style="color: white; background-color: rgb(189, 8, 28);"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin" style="background-color: rgb(0, 119, 181); color: white;"></i></a>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                    <!-- /.right-side -->
+
+                                </div>
+                                <!-- /.top-header -->
+                            </div>
+                            <!-- /.top-header -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--bottom header wrappper start-->
+        <div class="transparent-menu header-area hidden-menu-bar stick">
+            <div class="container">
+                <div class="row">
+                    <div class="main-menu-wrapper clear-fix">
+                        <div class="container">
+                            <div class="row">
+                                <div class="logo float-left">
+                                    <img src="images/black-blue-logo-removebg-preview.png" alt="LOGO">
+                                </div>
+    
+    
+                                <form action="#" class="float-right search_div search_response">
+                                    <input type="text" placeholder="Search here">
+                                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sc_navigation hidden-sm hidden-xs">
+                        
+                        <nav id="primary-nav" class="dropdown">
+                            <ul class="dropdown menu">
+                                <li><a href="index.html" title="">Home</a>
+                                </li>
+                                <li><a href="about_us.html" title="">About Us</a>
+                                </li>
+                                <li><a href="mission&vision.html" title="">Mission & Vision</a>
+                                </li>
+                                <li><a href="services.html" title="">Services</a>
+                                    <ul>
+                                        <li><a href="bodyguard.html" title=""><i class="fa fa-gg"></i> Bodyguard</a></li>
+                                        <li><a href="bouncer.html" title=""><i class="fa fa-gg"></i> Bouncer</a></li>
+                                        <li><a href="security_services.html" title=""><i class="fa fa-gg"></i> Security Services</a></li>
+                                        <li><a href="ceremonial.html" title=""><i class="fa fa-gg"></i> Ceremonial Services</a></li>
+                                        <li><a href="gunman.html" title=""><i class="fa fa-gg"></i> Gunman</a></li>
+                                        <li><a href="ladyguard.html" title=""><i class="fa fa-gg"></i> Lady Guard</a></li>
+                                        <li><a href="k9.html" title=""><i class="fa fa-gg"></i> K9</a></li>
+                                        <li><a href="kst.html" title=""><i class="fa fa-gg"></i> KST Services</a></li>
+                                        <li><a href="sguard.html" title=""><i class="fa fa-gg"></i> Security Guard</a></li>
+                                        <li><a href="housekeeping.html" title=""><i class="fa fa-gg"></i> House Keeping</a></li>
+                                        <li><a href="facility_managemnt.html" title=""><i class="fa fa-gg"></i> Facility Management</a></li>
+                                        <li><a href="esurveillance.html" title=""><i class="fa fa-gg"></i> E-Surveillance </a></li>
+                                        <li><a href="payroll.html" title=""><i class="fa fa-gg"></i> Payroll Management</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="blog_category.html" title="">Blog</a>
+                                </li>
+                                <li><a href="testimonial.html" title="">Testimonials</a>
+                                    <!-- <ul>
+                                        <li><a href="shop_Category.html" title=""><i class="fa fa-gg"></i>  shop category</a></li>
+                                        <li><a href="shop_single.html" title=""><i class="fa fa-gg"></i>  shop single</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="#" title="">Gallery</a>
+                                    <ul>
+                                        <li><a href="gallery.html" title=""><i class="fa fa-gg"></i> Image Gallery</a></li>
+                                         <li><a href="video.html" title=""><i class="fa fa-gg"></i> Video Gallery</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="career.html"> Career</a>
+                                </li>
+                                <li><a href="contact_us.html" title="">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Menu -->
+    
+                    </div>
+                    <!-- /.main-menu-wrapper -->
+                    <!-- mobile menu area start -->
+                    <div class="mobile-menu-area visible-sm visible-xs">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 cc_menu_top_margin">
+                                    <!-- mobile menu start -->
+                                    <div class="mobile-menu">
+                                        <nav style="display: block;">
+                                            <ul class="nav">
+                                                <li><a href="index.html">Home</a>
+                                                </li>
+                                                <li><a href="about_us.html">About Us</a>
+                                                </li>
+                                                <li><a href="mission&vision.html" title="">Mission & Vision</a>
+                                                </li>
+                                                <li><a href="services.html">Services</a>
+                                                    <!-- <ul>
+                                                        <li><a href="services.html">services</a>
+                                                        </li>
+                                                          <li><a href="service_single.html">services single</a>
+                                                        </li>
+                                                    </ul> -->
+                                                    <ul>
+                                                        <li><a href="bodyguard.html" title=""><i class="fa fa-gg"></i> Bodyguard</a></li>
+                                                        <li><a href="bouncer.html" title=""><i class="fa fa-gg"></i> Bouncer</a></li>
+                                                        <li><a href="security_services.html" title=""><i class="fa fa-gg"></i> Security Services</a></li>
+                                                        <li><a href="ceremonial.html" title=""><i class="fa fa-gg"></i> Ceremonial Services</a></li>
+                                                        <li><a href="gunman.html" title=""><i class="fa fa-gg"></i> Gunman</a></li>
+                                                        <li><a href="ladyguard.html" title=""><i class="fa fa-gg"></i> Lady Guard</a></li>
+                                                        <li><a href="k9.html" title=""><i class="fa fa-gg"></i> K9</a></li>
+                                                        <li><a href="kst.html" title=""><i class="fa fa-gg"></i> KST Services</a></li>
+                                                        <li><a href="sguard.html" title=""><i class="fa fa-gg"></i> Security Guard</a></li>
+                                                        <li><a href="housekeeping.html" title=""><i class="fa fa-gg"></i> House Keeping</a></li>
+                                                        <li><a href="facility_managemnt.html" title=""><i class="fa fa-gg"></i> Facility Management</a></li>
+                                                        <li><a href="esurveillance.html" title=""><i class="fa fa-gg"></i> E-Surveillance </a></li>
+                                                        <li><a href="payroll.html" title=""><i class="fa fa-gg"></i> Payroll Management</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="blog_category.html">Blog</a>
+                                                </li>
+                                                <li><a href="testimonial.html">Testimonials</a>
+                                                    <!-- <ul>
+                                                        <li><a href="shop_Category.html">shop category</a></li>
+                                                         <li><a href="shop_single.html">shop single</a></li>
+                                                    </ul> -->
+                                                </li>
+                                                  <li><a href="#">Gallery</a>
+                                                    <ul>
+                                                        <li><a href="gallery.html"> Image Gallery</a></li>
+                                                         <li><a href="video.html"> Video Gallery</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="career.html"> Career</a>
+                                                </li>
+                                                <li><a href="contact_us.html"> Contact</a>
+                                                </li>
+    
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <!-- mobile menu end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mobile menu area end -->
+                </div>
+                <!-- /.main-menu-wrapper -->
+            </div>
+        </div>
+        <!--header section end-->
+        <!--sc title section start-->
+        <div class="title_main_div">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="sc_tittle_cont_wrapper">
+                                <div class="sc_tittle_cont">
+                                    <h1 id="video">Video gallery </h1>
+                                    <ul class="page-breadcrum">
+                                        <li><a href="index.html">Home</a>
+                                        </li>
+                                        <li class="icon_breamcum"> > </li>
+                                        <li>Video Gallery</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Header wrapper end-->
+
+    <input class="inpt" type="radio" name="Photos" id="check1" checked>
+<input class="inpt" type="radio" name="Photos" id="check2">
+<input class="inpt" type="radio" name="Photos" id="check3">
+<input class="inpt" type="radio" name="Photos" id="check4">
+<input class="inpt" type="radio" name="Photos" id="check5">
+<input class="inpt" type="radio" name="Photos" id="check6">
+<input class="inpt" type="radio" name="Photos" id="check7">
+<input class="inpt" type="radio" name="Photos" id="check8">
+<input class="inpt" type="radio" name="Photos" id="check9">
+<input class="inpt" type="radio" name="Photos" id="check10">
+<input class="inpt" type="radio" name="Photos" id="check11">
+<!-- <input class="inpt" type="radio" name="Photos" id="check12"> -->
+<input class="inpt" type="radio" name="Photos" id="check13">
+<!-- <input class="inpt" type="radio" name="Photos" id="check14"> -->
+
+
+
+
+<div class="contain">
+  <div class="top-contnt">
+    <label for="check1">All</label>
+    <label for="check2">Security Services</label>
+    <label for="check3">Bodyguard</label>
+    <label for="check4">Bouncer</label>
+    <label for="check5">K9</label>
+    <label for="check6">KST</label>
+    <label for="check7">Guards</label>
+    <label for="check8">Lady Guards</label>
+    <label for="check9">Gunman</label>
+    <label for="check10">Housekeeping</label>
+    <label for="check11">Facility Management</label>
+    <!-- <label for="check12">E-surveillance</label> -->
+    <label for="check13">Ceremonial</label>
+    <!-- <label for="check14">Payroll</label> -->
+  </div>
+
+  <div class="photo-gal">
+    <div class="pic item1 sg" style="transform: scale(1);">
+        <a href="images/sec5.jpg" data-fancybox="gallery" data-caption="" ><img src="images/sec5.jpg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+     <div class="pic item2 sg">  
+        <a href="images/sec3.jpg" data-fancybox="gallery" data-caption="" ><img src="images/sec3.jpg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>  
+    <div class="pic item3 sg">
+        <a href="images/sec4.jpg" data-fancybox="gallery" data-caption="" ><img src="images/sec4.jpg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item4 sg">
+        <a href="images/sec2.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/sec2.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+     <div class="pic item5 ss">
+        <a href="images/62.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/62.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div> 
+    <div class="pic item6 sg">
+        <a href="images/img16.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/img16.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item7 cere">
+        <a href="images/banner1.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/banner1.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item8 cere">
+        <a href="images/banner2.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/banner2.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item9 cere">
+        <a href="images/banner3.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/banner3.jpeg"></a> 
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item10 cere" style="display: inline-block;">
+        <a href="images/50.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/50.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item11 cere">
+        <a href="images/banner5.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/banner5.jpeg"></a>
+         <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item12 ss">
+        <a href="images/57.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/57.jpeg"></a> 
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item13 sg">
+        <a href="images/56.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/56.jpeg"></a> 
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item14 sg">
+        <a href="images/58.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/58.jpeg"></a>
+         <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item15 sg">
+        <a href="images/59.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/59.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item16 sg">
+        <a href="images/63.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/63.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item17 sg">
+        <a href="images/security.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/security.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item18 sg">
+        <a href="images/65.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/65.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item19 sg">
+        <a href="images/73.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/73.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item20 sg" style="display: inline-block;">
+        <a href="images/27.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/27.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item21 sg">
+        <a href="images/67.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/67.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    
+    <div class="pic item23 ss">
+        <a href="images/22.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/22.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item24 ss">
+        <a href="images/23.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/23.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item25 ss">
+        <a href="images/25.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/25.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+   
+    <div class="pic item22 ss">
+        <a href="images/70.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/70.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item27 ss">
+        <a href="images/26.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/26.jpeg"></a> 
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    
+    <div class="pic item28 sg">
+        <a href="images/69.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/69.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item29 hsk">
+        <a href="images/1.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/1.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <!-- <div class="pic item30 hsk">
+        <a href="images/2.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/2.jpeg"></a>
+    </div> -->
+    <div class="pic item31 hsk">
+        <a href="images/3.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/3.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item32 hsk">
+        <a href="images/4.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/4.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item33 hsk">
+        <a href="images/6.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/6.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item34 hsk">
+        <a href="images/8.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/8.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item35 hsk">
+        <a href="images/7.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/7.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item36 hsk">
+        <a href="images/5.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/5.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item37 hsk">
+        <a href="images/9.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/9.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item38 hsk">
+        <a href="images/10.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/10.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item39 hsk">
+        <a href="images/11.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/11.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item40 hsk">
+        <a href="images/12.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/12.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item41 hsk">
+        <a href="images/13.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/13.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item42 kst">
+        <a href="images/14.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/14.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item43 kst">
+        <a href="images/15.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/15.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item44 kst">
+        <a href="images/16.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/16.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item45 k9">
+        <a href="images/19.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/19.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item46 kst">
+        <a href="images/18.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/18.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <!-- <div class="pic item47 sg">
+        <a href="images/21.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/21.jpeg"></a>
+        <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div>
+    </div> -->
+    <div class="pic item48 ss">
+        <a href="images/72.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/72.jpeg" style="object-fit: fill;"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item49 ss">
+        <a href="images/68.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/68.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <!-- <div class="pic item50 sg">
+       <a href="images/28.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/28.jpeg"></a>
+    </div> -->
+    <div class="pic item51 ss">
+       <a href="images/32.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/32.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item26 ss">
+        <a href="images/71.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/71.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item52 k9">
+       <a href="images/35.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/35.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <!-- <div class="pic item53 main" style="display:inline-block">
+       <a href="images/36.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/36.jpeg"></a>
+    </div> -->
+    <div class="pic item54 cere">
+       <a href="images/41.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/41.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item55 cere">
+       <a href="images/42.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/42.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item56 cere">
+       <a href="images/43.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/43.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item57 cere">
+       <a href="images/banner4.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/banner4.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <!-- <div class="pic item58 sg">
+       <a href="images/51.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/51.jpeg"></a>
+    </div> -->
+    <div class="pic item59 hsk">
+       <a href="images/52.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/52.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <!-- <div class="pic item60 sg">
+       <a href="images/53.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/53.jpeg"></a>
+    </div> -->
+    <!-- <div class="pic item61 pay">
+       <a href="images/55.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/55.jpeg" style="object-fit:contain;"></a>
+    </div> -->
+    <div class="pic item62 cere">
+       <a href="images/60.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/60.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <!-- <div class="pic item63 es">
+       <a href="images/cctv.jpg" data-fancybox="gallery" data-caption="" ><img src="images/cctv.jpg" style="object-fit: contain;"></a>
+    </div> -->
+    <div class="pic item64 body" >
+       <a href="images/30.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/30.jpeg" style="object-fit:contain;"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item65 bounc">
+       <a href="images/30.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/30.jpeg" style="object-fit:contain;"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item66 k9">
+       <a href="images/20.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/20.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item67 lg">
+       <a href="images/ladyguard.jpg" data-fancybox="gallery" data-caption="" ><img src="images/ladyguard.jpg" style="object-fit:contain;"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item68 gm">
+       <a href="images/58.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/58.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item69 gm">
+       <a href="images/59.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/59.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item70 gm">
+      <a href="images/63.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/63.jpeg"></a>
+      <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item71 gm">
+       <a href="images/64.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/64.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item72 gm" style="display: inline-block;">
+       <a href="images/66.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/66.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item73 gm">
+       <a href="images/25.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/25.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item74 fm">
+       <a href="images/1.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/1.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item75 fm">
+       <a href="images/3.jpeg" data-fancybox="gallery" data-caption="" ><img src="images/3.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div>     -->
+    </div>
+    <div class="pic item76 fm">
+       <a href="images/4.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/4.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item77 fm">
+       <a href="images/5.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/5.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item78 fm">
+       <a href="images/6.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/6.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item79 fm">
+       <a href="images/7.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/7.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item80 fm">
+       <a href="images/8.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/8.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item81 fm" style="display:inline-block;">
+       <a href="images/9.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/9.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item82 fm">
+       <a href="images/10.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/10.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item83 fm">
+       <a href="images/11.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/11.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item84 fm">
+       <a href="images/12.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/12.jpeg"></a>
+       <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+    </div>
+    <div class="pic item85 fm">
+        <a href="images/2.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/2.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+     </div>
+     <div class="pic item86 k9">
+        <a href="images/54.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/54.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+     </div>
+     <div class="pic item87 gm">
+        <a href="images/security.jpeg" data-fancybox="gallery" data-caption="" > <img src="images/security.jpeg"></a>
+        <!-- <div class="image_overlay">
+            <div class="image_title">Security</div>
+        </div> -->
+     </div>
+     <!-- <div class="pic item88 es">
+        <a href="images/cctv1.jpg" data-fancybox="gallery" data-caption="" > <img src="images/cctv1.jpg" style="object-fit: contain;"></a>
+     </div>
+     <div class="pic item89 es">
+        <a href="images/tower.jpg" data-fancybox="gallery" data-caption="" > <img src="images/tower.jpg" style="object-fit: contain;"></a>
+     </div> -->
+  </div>
+</div>
+   
+    <!-- Tweet Feed Wrapper Start -->
+
+    <div class="tweet_wrapper">
+	<div class="container">
+		<div class="row">
+			<div id="myCarousel" class="vertical-slider carousel vertical slide col-md-12" data-ride="carousel">
+				<div class="row">
+					<!-- <div class="col-md-12 hidden-xs">
+						<span data-slide="next" class="btn-vertical-slider fa fa-long-arrow-up tc_up_btn" style="font-size: 28px; top: 5px;"></span>  
+					</div> -->
+				</div>
+				<br>
+				<!-- Carousel items -->
+				<div class="carousel-inner">
+					<div class="item">
+						<div class="row">
+                                <div class="col-xs-12 col-sm-1 col-md-1 twit_icon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="col-xs-12 col-sm-9 col-md-9">
+                                    <div class="twee_txt">
+                                        <p>We believe in proper use of the service employees and bringing best value for money to our clients.</p>
+                                        <span>by Black & Blue - 2  min ago</span>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+					<div class="item active">
+						<div class="row">
+                                <div class="col-xs-12 col-sm-1 col-md-1 twit_icon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="col-xs-12 col-sm-9 col-md-9">
+                                    <div class="twee_txt">
+                                        <p>We are a process oriented FM company. We maintain SOPs for service uniformity and implementation of best practice. </p>
+                                        <span>by Black & Blue - 2  min ago</span>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 hidden-xs">
+						<span data-slide="prev" class="btn-vertical-slider fa fa-long-arrow-down tc_down_btn" style="font-size: 28px; top: 0px;"></span>  
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 hidden-xs">
+						<span data-slide="next" class="btn-vertical-slider fa fa-long-arrow-up tc_up_btn" style="font-size: 28px; top: 0px;"></span>  
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 visible-xs">
+						<span data-slide="prev" class="btn-vertical-slider fa fa-long-arrow-down tc_down_btn" style="font-size: 28px; top: 0px;"></span>  
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+    <!-- Tweet Feed Wrapper End -->
+    <!--footer section start-->
+    <div class="footer_wrapper">
+        <div class="section3_wrapper_second">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6  wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">
+                        <div class="wrapper_second_about">
+                            <div class="wrapper_first_image">
+                                <!-- <a href="#"><img src="images/footer_logo.png" class="img-responsive" alt="logo" /></a> -->
+                                <!--<img width="134" height="125" src="https://apexshop.in/black-and-blue/wp-content/uploads/2022/08/black-blue-logo.png" class="attachment-full size-full" alt="" loading="lazy">-->
+                                <img src="images/logo.png" alt="">
+                            </div>
+                            <div class="abotus_content">
+                                <p>Black & Blue. We under­stand the need of our clients and pro­vide the best possible solution within budget.</p>
+                                <!-- <p>Lorem Ipsum is that it has aor-less normal distrion. </p> -->
+                            </div>
+                            <!-- <div class="aboutus_link">
+                                <a href="#">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-xs-12 col-sm-6  wow  fadeInUp animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUp;">
+                        <div class="wrapper_second_useful">
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-stop-circle"></i>Integrated Facility Management </a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-stop-circle"></i>Security Services </a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-stop-circle"></i>Housekeeping Services </a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-stop-circle"></i>Fire & Safety Management</a>
+                                </li>
+                                <!-- <li><a href="#"><i class="fa fa-stop-circle"></i> Access Control Systems</a> </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-xs-12 col-sm-6  wow  fadeInUp animated" data-wow-duration="1.6s" style="visibility: visible; animation-duration: 1.6s; animation-name: fadeInUp;">
+                        <div class="wrapper_second_blog">
+                            <h4> Contact Us</h4>
+                            <div class="blog_wrapper1">
+                                <!-- <div class="blog_image">
+                                    <img src="images/footer_1.png" class="img-responsive" alt="blog-img1_img" />
+                                </div> -->
+                                <div class="blog_text" style="color: white;">
+                                    Corporate Office : BC 253, Ground Floor, Salt Lake City, Sec-I, Kolkata – 64
+                                    <!-- <h5><a href="#">Lorem Security the men sefty</a></h5>
+                                    <div class="blog_date">June 28, 2020</div> -->
+                                </div>
+                            </div>
+                            <div class="blog_wrapper2">
+                                <!-- <div class="blog_image">
+                                    <img src="images/footer_2.png" class="img-responsive" alt="blog-img2_img" />
+                                </div> -->
+                                <div class="blog_text" style="color: white;">
+                                    Contact No. : <br>
+                                    Kol- 8653002202<br>
+                                    Kol- 8653002203<br>
+                                    Durgapur- 8653002205<br>
+                                    Ranchi- 9147096146
+
+                                    <!-- <h5><a href="#">Lorem Security the men sefty</a></h5>
+                                    <div class="blog_date">June 28, 2020</div> -->
+                                </div>
+                            </div>
+                            <div class="blog_wrapper2">
+                                <!-- <div class="blog_image">
+                                    <img src="images/footer_2.png" class="img-responsive" alt="blog-img2_img" />
+                                </div> -->
+                                <div class="blog_text" style="color: white;">
+                                    E-mail Id: info@blackandblue.co.in
+                                    <!-- <h5><a href="#">Lorem Security the men sefty</a></h5>
+                                    <div class="blog_date">June 28, 2020</div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-3 col-xs-12 col-sm-6  wow  fadeInUp animated" data-wow-duration="1.9s" style="visibility: visible; animation-duration: 1.9s; animation-name: fadeInUp;">
+                        <div class="wrapper_second_contact">
+                            <h4>news letter</h4>
+                            <div class="letter_div">
+                                <input type="text" placeholder="your email"><a href="#"><i class="fa fa-location-arrow"></i></a>
+                            </div>
+                            <ul>
+                                <li><i class="fa fa-location-arrow"></i><span>512 - omexcity, California</span>
+                                </li>
+                                <li><i class="fa fa-phone"></i><span>+65 1800-123-145</span>
+
+                                </li>
+                                <li><i class="fa fa-envelope"></i><a href="#"><span class="__cf_email__" data-cfemail="fa899f998f88938e83ba9f829b978a969fd4999597">[email&#160;protected]</span></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section5_copyright_text sc_toppadder20 sc_bottompadder20">
+        <a href="javascript:" id="return-to-top" style="top: -60px;"><i class="fa fa-caret-up"></i>top</a>
+        <div class="container footer_text">
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-xs-12 col-sm-6">
+                    <div class="section5_copyright">
+                        <!-- <p>Copyright © 2023  <a href="#">Black & Blue -</a> | created by <a href="#">webstrot.</a></p> -->
+                        Copyright © 2023  <a href="#">Black & Blue -</a> All Rights Reserved. Designed and developed by Sikharthy Infotech Private Limited.
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-xs-12 col-sm-6">
+                    <div class="section5_footer_menu">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: white; background-color: rgb(59, 89, 152);"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: white; background-color: rgb(8, 160, 233);"></i></a>
+                            </li>
+
+                            <li><a href="#"><i class="fa fa-linkedin" style="background-color: rgb(0, 119, 181); color: white;"></i></a>
+                            </li> 
+
+                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true" style="color: red; background-color: white;"></i></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!--footer section end -->
+    <!--main js files-->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery_min.js"></script>
+    <script src="js/jqu_menu.js"></script>
+    <script src="js/jqu_slickmenu.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="venobox/js/venobox.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="js/progress-script.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/plugin/rs_slider/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/plugin/rs_slider/jquery.themepunch.tools.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.addon.snow.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.actions.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.carousel.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.kenburn.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.migration.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.navigation.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.parallax.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.slideanims.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.video.min.js"></script>
+    <script src="js/responsive_header.js"></script>
+    <script src="js/contact_form.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <!--js code-->
+   <script>
+    function initMap() {
+        var uluru = {
+        lat: -36.742775,
+        lng: 174.731559
+        };
+        var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        scrollwheel: false,
+        center: uluru
+        });
+        var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+        });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBctr8WYTfFDi_oGbPEolSDzn4VZaAKVK0&callback=initMap"></script>
+    <!-- map Script-->
+</body>
+
+</html>
